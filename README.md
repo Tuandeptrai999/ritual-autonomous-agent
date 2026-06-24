@@ -23,16 +23,16 @@ The agent is actively running on the Ritual Testnet:
 
 | Field | Value |
 |-------|-------|
-| **Contract Address** | `0x46Fc8ad3D1c2ca57eBc2F4beD9DbD654166009E9` |
+| **Contract Address** | `0x6032697f3445F8157f3CFdF86d224d67341Ee43f` |
 | **Owner Wallet** | `0xe63a4d9bB091659a47972980E91a087aF4430466` |
 | **TEE Executor** | `0x9dc11412391Dc3EDF59811FC9Ee7bEbFD41c8b4C` |
-| **Schedule ID** | `#2729512` |
-| **startAgent TX** | `0xf660d90d6f3228f9aa225a3c13bdea006e8100885dcd71bd0a5e0e980dd631c2` |
+| **Schedule ID** | `#2730709` |
+| **startAgent TX** | `0x8b61f15bd857dec84e8d42a6e55f6c1386f557933b9eadd00bd0de33f87533fd` |
 | **Frequency** | Every 500 blocks (~3 minutes) |
 | **Total Calls** | 5 iterations |
 | **Model** | `gemini-2.5-flash` |
 | **Network** | Ritual Testnet (Chain ID: 1979) |
-| **Explorer** | [View Contract](https://explorer.ritualfoundation.org/address/0x46Fc8ad3D1c2ca57eBc2F4beD9DbD654166009E9) |
+| **Explorer** | [View Contract](https://explorer.ritualfoundation.org/address/0x6032697f3445F8157f3CFdF86d224d67341Ee43f) |
 
 ## Compiler & Verification Info
 | Field | Value |
