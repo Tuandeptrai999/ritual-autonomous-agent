@@ -15,12 +15,33 @@ HomoMimic uses the Ritual Sovereign Agent precompile (`0x080C`) to run a recurri
   - Stores the request on-chain.
   - Starts the autonomous scheduler loop.
 - **`compile.js`**: Script to compile the Solidity contracts using `solc`.
+- **`check-status.js`**: Script to check the live on-chain status of the agent.
+- **`full-check.js`**: Script to run a full health check of the agent.
 
 ## On-Chain Information
 The agent is actively running on the Ritual Testnet:
-- **Contract Address**: `0x80482d61417B1a44992045F55943f08a6187ccbA`
-- **Schedule ID**: `#2728872` (Wakes up every 500 blocks, approx 3 minutes)
-- **Model**: `gemini-2.5-flash`
+
+| Field | Value |
+|-------|-------|
+| **Contract Address** | `0x46Fc8ad3D1c2ca57eBc2F4beD9DbD654166009E9` |
+| **Owner Wallet** | `0xe63a4d9bB091659a47972980E91a087aF4430466` |
+| **TEE Executor** | `0x9dc11412391Dc3EDF59811FC9Ee7bEbFD41c8b4C` |
+| **Schedule ID** | `#2729512` |
+| **startAgent TX** | `0xf660d90d6f3228f9aa225a3c13bdea006e8100885dcd71bd0a5e0e980dd631c2` |
+| **Frequency** | Every 500 blocks (~3 minutes) |
+| **Total Calls** | 5 iterations |
+| **Model** | `gemini-2.5-flash` |
+| **Network** | Ritual Testnet (Chain ID: 1979) |
+| **Explorer** | [View Contract](https://explorer.ritualfoundation.org/address/0x46Fc8ad3D1c2ca57eBc2F4beD9DbD654166009E9) |
+
+## Compiler & Verification Info
+| Field | Value |
+|-------|-------|
+| **Solidity Version** | `v0.8.20+commit.a1b79de6` |
+| **Optimizer** | Enabled, 200 runs |
+| **EVM Version** | Shanghai |
+| **viaIR** | false |
+| **License** | MIT |
 
 ## Setup & Deployment
 
@@ -45,3 +66,14 @@ The agent is actively running on the Ritual Testnet:
    ```bash
    node deploy-and-start.js
    ```
+
+5. Check agent status:
+   ```bash
+   node full-check.js
+   ```
+
+## How It Works
+1. **Schedule**: The Scheduler contract calls `wakeUp()` every 500 blocks.
+2. **See → Think → Do**: The Sovereign Agent precompile (`0x080C`) runs the AI inference loop inside a TEE.
+3. **Deliver**: The result is delivered back on-chain via `onSovereignAgentResult()`.
+4. **Store**: The agent's `lastThought` and `lastAction` are stored on-chain for anyone to read.
