@@ -13,7 +13,7 @@ async function check() {
     "function lastAction() view returns (string)"
   ];
   
-  const contract = new ethers.Contract('0x80482d61417B1a44992045F55943f08a6187ccbA', abi, provider);
+  const contract = new ethers.Contract('0x6032697f3445F8157f3CFdF86d224d67341Ee43f', abi, provider);
   
   console.log("=== HOMO MIMIC CONTRACT STATUS ===");
   console.log("Owner:", await contract.owner());

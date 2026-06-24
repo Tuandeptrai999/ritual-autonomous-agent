@@ -4,7 +4,7 @@ const fs = require('fs');
 async function fullCheck() {
   const provider = new ethers.JsonRpcProvider('https://rpc.ritualfoundation.org', { chainId: 1979, name: 'ritual' });
 
-  const CONTRACT = '0x80482d61417B1a44992045F55943f08a6187ccbA';
+  const CONTRACT = '0x6032697f3445F8157f3CFdF86d224d67341Ee43f';
   const OWNER_WALLET = '0xe63a4d9bB091659a47972980E91a087aF4430466';
   const SCHEDULER = '0x56e776BAE2DD60664b69Bd5F865F1180ffB7D58B';
   const RITUAL_WALLET = '0x532F0dF0896F353d8C3DD8cc134e8129DA2a3948';
