@@ -18,8 +18,8 @@ HomoMimic uses the Ritual Sovereign Agent precompile (`0x080C`) to run a recurri
 
 ## On-Chain Information
 The agent is actively running on the Ritual Testnet:
-- **Contract Address**: `0x9581a0f1710E42643393e9f1cDd9709447c21656`
-- **Schedule ID**: `#2727541` (Wakes up every 500 blocks, approx 3 minutes)
+- **Contract Address**: `0x80482d61417B1a44992045F55943f08a6187ccbA`
+- **Schedule ID**: `#2728872` (Wakes up every 500 blocks, approx 3 minutes)
 - **Model**: `gemini-2.5-flash`
 
 ## Setup & Deployment

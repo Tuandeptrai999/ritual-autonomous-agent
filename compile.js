@@ -13,7 +13,6 @@ function compileContract(filename, contractName) {
     },
     settings: {
       optimizer: { enabled: true, runs: 200 },
-      viaIR: true,
       outputSelection: {
         '*': { '*': ['abi', 'evm.bytecode.object'] }
       }
@@ -50,10 +49,3 @@ fs.writeFileSync(
 );
 console.log('✅ HomoMimic compiled → build/HomoMimic.json');
 
-// Also compile original AutonomousAgent for reference
-const autonomous = compileContract('AutonomousAgent.sol', 'AutonomousAgent');
-fs.writeFileSync(
-  path.join(buildDir, 'AutonomousAgent.json'),
-  JSON.stringify(autonomous, null, 2)
-);
-console.log('✅ AutonomousAgent compiled → build/AutonomousAgent.json');
